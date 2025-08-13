@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/lazyIntern-frontend/static/css/main.1856ecc8.css",
+    "main.js": "/lazyIntern-frontend/static/js/main.80a18e3d.js",
+    "index.html": "/lazyIntern-frontend/index.html",
+    "main.1856ecc8.css.map": "/lazyIntern-frontend/static/css/main.1856ecc8.css.map",
+    "main.80a18e3d.js.map": "/lazyIntern-frontend/static/js/main.80a18e3d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1856ecc8.css",
+    "static/js/main.80a18e3d.js"
+  ]
+}
