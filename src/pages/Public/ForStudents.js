@@ -1,11 +1,11 @@
 import React from "react";
-import Header from "../components/Header";
-import HeroSection from "../components/ForStudents/HeroSection";
-import BenefitsSection from "../components/ForStudents/BenefitsSection";
-import FeatureCards from "../components/ForStudents/FeatureCards";
-import ProfileTips from "../components/ForStudents/ProfileTips";
-import WhyItWorks from "../components/ForStudents/WhyItWorks";
-import CtaSection from "../components/ForStudents/CtaSection";
+import Header from "../../components/Header";
+import HeroSection from "../../components/ForStudents/HeroSection";
+import BenefitsSection from "../../components/ForStudents/BenefitsSection";
+import FeatureCards from "../../components/ForStudents/FeatureCards";
+import ProfileTips from "../../components/ForStudents/ProfileTips";
+import WhyItWorks from "../../components/ForStudents/WhyItWorks";
+import CtaSection from "../../components/ForStudents/CtaSection";
 
 const ForStudents = () => {
   return (

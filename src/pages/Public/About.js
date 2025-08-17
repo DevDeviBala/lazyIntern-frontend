@@ -1,9 +1,9 @@
 import React from "react";
-import Header from "../components/Header";
-import HeroSection from "../components/About/HeroSection";
-import MissionSection from "../components/About/MissionSection";
-import WhyWeStarted from "../components/About/WhyWeStarted";
-import CtaSection from "../components/About/CtaSection";
+import Header from "../../components/Header";
+import HeroSection from "../../components/About/HeroSection";
+import MissionSection from "../../components/About/MissionSection";
+import WhyWeStarted from "../../components/About/WhyWeStarted";
+import CtaSection from "../../components/About/CtaSection";
 
 const About = () => {
   return (

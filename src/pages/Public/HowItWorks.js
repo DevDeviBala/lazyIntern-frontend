@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../components/Header";
-import HeroSection from "../components/HowItWorks/HeroSection";
-import ProcessSection from "../components/HowItWorks/ProcessSection";
+import Header from "../../components/Header";
+import HeroSection from "../../components/HowItWorks/HeroSection";
+import ProcessSection from "../../components/HowItWorks/ProcessSection";
 
 const HowItWorks = () => {
   return (
