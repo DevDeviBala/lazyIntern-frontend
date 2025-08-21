@@ -1,6 +1,8 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 
-import Auth from "../pages/Auth";
+import Auth from "../pages/Auth/Auth";
+import ForgotPassword from "../pages/Auth/ForgotPassword";
+import ResetPassword from "../pages/Auth/ResetPassword";
 import Home from "../pages/Public/Home";
 import ForCompanies from "../pages/Public/ForCompanies";
 import ForStudents from "../pages/Public/ForStudents";
@@ -16,6 +18,8 @@ function AppRoutes() {
     <Routes>
       {/* Public Routes */}
       <Route path="/auth" element={<Auth />} />
+      <Route path="forgot-password" element={<ForgotPassword />} />
+      <Route path="reset-password/:token" element={<ResetPassword />} />
       <Route path="/" element={<Home />} />
       <Route path="/how-it-works" element={<HowItWorks />} />
       <Route path="/for-students" element={<ForStudents />} />

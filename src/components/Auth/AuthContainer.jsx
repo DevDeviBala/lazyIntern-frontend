@@ -2,9 +2,24 @@ import { useState } from "react";
 import AuthHeader from "./AuthHeader";
 import LoginForm from "./LoginForm";
 import SignupForm from "./SignupForm";
+import ForgotPasswordForm from "./ForgotPasswordForm"; // Add this import
 
 const AuthContainer = () => {
   const [activeTab, setActiveTab] = useState("login");
+  const [showForgotPassword, setShowForgotPassword] = useState(false);
+
+  if (showForgotPassword) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-teal-50 flex items-center justify-center p-4">
+        <div className="rounded-lg border bg-card text-card-foreground shadow-sm w-full max-w-md">
+          <AuthHeader />
+          <div className="p-6 pt-0">
+            <ForgotPasswordForm onBackToLogin={() => setShowForgotPassword(false)} />
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-teal-50 flex items-center justify-center p-4">
@@ -37,7 +52,8 @@ const AuthContainer = () => {
               className="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               style={{ display: activeTab === "login" ? "block" : "none" }}
             >
-              <LoginForm />
+              {/* Fix: Pass the function correctly */}
+              <LoginForm onShowForgotPassword={() => setShowForgotPassword(true)} />
             </div>
             
             <div 

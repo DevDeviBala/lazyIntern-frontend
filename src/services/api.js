@@ -7,9 +7,23 @@ const API = axios.create({
 // Attach JWT token automatically
 API.interceptors.request.use((config) => {
   const token = localStorage.getItem("access");
-  if (token) {
+
+  // Don't attach token for auth endpoints that don't require authentication
+  const noAuthEndpoints = [
+    "/auth/login/",
+    "/auth/register/",
+    "/auth/forgot-password/",
+    "/auth/reset-password/"
+  ];
+
+  const shouldAttachToken = token && !noAuthEndpoints.some(endpoint => 
+    config.url.includes(endpoint)
+  );
+
+  if (shouldAttachToken) {
     config.headers.Authorization = `Bearer ${token}`;
   }
+
   return config;
 });
 
